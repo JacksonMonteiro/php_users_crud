@@ -74,6 +74,12 @@ table.striped + br + a {
 	width: 150px;
 }
 
+a#delete {
+	margin: 15px 0 0 5px;
+	font-weight: bold;
+	width: 150px;	
+} 
+
 .flex {
 	display: flex;
 }

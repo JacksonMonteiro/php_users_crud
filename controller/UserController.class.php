@@ -31,6 +31,24 @@ class UserController {
 			echo "Error: ${$e->getMessage()}";
 		}
 	}
+
+	public function delete($email) {
+		try {
+			$connection = new Connection('../sql/config.ini');
+			$query = "DELETE FROM users WHERE email=:e;";
+			$command = $connection->getPDO()->prepare($query);
+			$command->bindParam("e", $email);
+			if ($command->execute()){
+				$connection->closeConnection();
+				return true;
+			} else {
+				$connection->closeConnection();
+				return false;
+			}
+		} catch (PDOException $e) {
+			echo "Error: {$e->getMessage()}";
+		}
+	}
 }
 
 ?>

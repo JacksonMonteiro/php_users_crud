@@ -1,5 +1,5 @@
-  <!DOCTYPE html>
-  <html>
+<!DOCTYPE html>
+<html>
     <head>
     	<!--Import Google Icon Font-->
     	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,28 +32,11 @@
 		    				<td>jackson@gmail.com</td>
 		    				<td>123456</td>
 		    				<td><a href="#" class="btn-floating deep-purple lighten-1"><i class="medium material-icons">create</i></a></td>
-		    				<td><a href="view/remove_user_form.php" class="btn-floating red"><i class="medium material-icons">delete</i></a></td>
-	    				</tr>
-
-	    				<tr>
-		    				<td>Jackson</td>
-		    				<td>jackson@gmail.com</td>
-		    				<td>123456</td>
-		    				<td><a href="#" class="btn-floating deep-purple lighten-1"><i class="medium material-icons">create</i></a></td>
-		    				<td><a href="view/remove_user_form.php" class="btn-floating red"><i class="medium material-icons">delete</i></a></td>
-	    				</tr>
-
-	    				<tr>
-		    				<td>Jackson</td>
-		    				<td>jackson@gmail.com</td>
-		    				<td>123456</td>
-		    				<td><a href="#" class="btn-floating deep-purple lighten-1"><i class="medium material-icons">create</i></a></td>
-		    				<td><a href="view/remove_user_form.php" class="btn-floating red"><i class="medium material-icons">delete</i></a></td>
 	    				</tr>
 	    			</tbody>
 	    		</table>
 	    		<br>
-	    		<a href="view/add_user_form.php" class="btn deep-purple lighten-1">Add User</a>
+	    		<a href="view/add_user_form.php" class="btn deep-purple lighten-1">Add User</a> <a href="view/delete_user_form.php" class="btn red" id="delete">Delete user</a>
 	    	</div>
     	</div>
 
