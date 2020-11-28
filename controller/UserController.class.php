@@ -1,7 +1,7 @@
 <?php
 
 require_once('sql/Connection.class.php');
-require_once('../../model/User.class.php');
+require_once('model/User.class.php');
 
 class UserController {
 	public function insert($user){
@@ -31,6 +31,23 @@ class UserController {
 			echo "Error: ${$e->getMessage()}";
 		}
 	}
+
+	public function read(){
+		try{
+			$connection= new Connection("controller/sql/config.ini");
+        	$command = $connection->getPDO()->prepare("SELECT * FROM users;");
+        	if($command->execute()){
+            	$list = $command->fetchAll(PDO::FETCH_CLASS, "User");
+	            $connection->closeConnection();
+    	        return $list;
+    	    }else{
+				$connection->closeConnection();
+        	    return null;
+        	 }
+     	}catch(PDOException $e){
+        	echo ("[-] System error: {$e->getMessage()}");
+      	}
+   }
 
 	public function delete($email) {
 		try {

@@ -27,13 +27,24 @@
 	    				</tr>
 	    			</thead>
 	    			<tbody>
-	    				<tr>
-		    				<td>Jackson</td>
-		    				<td>jackson@gmail.com</td>
-		    				<td>123456</td>
-		    				<td><a href="#" class="btn-floating deep-purple lighten-1"><i class="medium material-icons">create</i></a></td>
-	    				</tr>
-	    			</tbody>
+	    				<?php
+	    				require_once('controller/UserController.class.php');
+	    				$controller = new UserController();
+	    				$list = $controller->read();
+	    				if ($list != null) {
+	    					foreach ($list as $usr) {
+	    						echo 
+	    						"
+	    						<tr>
+	    							<td>{$usr->getUsername()}</td>
+	    							<td>{$usr->getEmail()}</td>
+	    							<td>{$usr->getPassword()}</td>
+	    							<td><a href='#' class='btn-floating deep-purple lighten-1'><i class='mediu material-icons'>create</i></a></td>
+	    						</tr>
+	    						";
+	    					}
+	    				}
+	    				?>
 	    		</table>
 	    		<br>
 	    		<a href="view/add_user_form.php" class="btn deep-purple lighten-1">Add User</a> <a href="view/delete_user_form.php" class="btn red" id="delete">Delete user</a>

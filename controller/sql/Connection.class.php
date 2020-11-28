@@ -24,7 +24,6 @@ class Connection {
 					case "mysql":
 						$this->pdo = new PDO("{$this->driver}:host={$this->server};dbname={$this->db}", $this->usr, $this->pwd);
 						$this->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-						echo "<script> alert('success'); </script>";
 						break;
 					default:
 						die("</script> alert('DBMS Incompatible with the system'); </script>");
