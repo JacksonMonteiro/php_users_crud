@@ -14,26 +14,24 @@
     </header>
 
 	<div class="row flex" id="add-user-form">
-		<form action="#" method="POST" class="col s11">
+		<form action="../controller/php_action/insert_user.php" method="POST" class="col s11">
 			<div class="row">
 				<label for="usrnm" class="input-field col s11">
-					User Name: <input type="text" placeholder="User Name" id="usrnm" class="validate">
+					User Name: <input type="text" placeholder="User Name" id="usrnm" name="usrnm" class="validate">
 				</label>
 			</div>
 			<div class="row">
 				<label for="mail" class="input-field col s11">
-					E-mail: <input type="text" placeholder="email@email.com" id="mail" class="validate">
+					E-mail: <input type="text" placeholder="email@email.com" id="mail" name="mail" class="validate">
 				</label>
 			</div>
 			<div class="row">
-				<label for="usrnm" class="input-field col s11">
-					User Name: <input type="text" placeholder="User Name" id="usrnm" class="validate">
+				<label for="pwd" class="input-field col s11">
+					Password: <input type="password" placeholder="User Name" id="pwd" name="pwd" class="validate">
 				</label>		
 			</div>
+			<input type="submit" value="Add user" class="btn deep-purple lighten-1 button"> <a href="../index.php" class="btn red button">Users list</a>
 		</form>
 	</div>
-	<a href="#" class="btn deep-purple lighten-1 button">Add user</a>
-	<a href="../index.php" class="btn red button">Users list</a>
-	
 </body>
 </html>

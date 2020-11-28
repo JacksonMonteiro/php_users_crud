@@ -30,7 +30,7 @@ class Connection {
 						die("</script> alert('DBMS Incompatible with the system'); </script>");
 				}
 			} else {
-				die("<script>Configuration file not founded</script>")
+				die("<script>alert('Configuration file not founded')</script>");
 			}
 		} catch (PDOException $e) {
 			$error = addslashes($e->getMessage());
