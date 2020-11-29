@@ -5,4 +5,5 @@ It is necessary to know the username, e-mail and password (which will be stored 
 
 ## Used Technologies 
 _Programming language used:_ __PHP__ </br>
-_Database used:_ __MySQL / MariaDB__
+_Database used:_ __MySQL / MariaDB__ </br>
+_CSS Framework:_ __Materialize.css__
