@@ -21,8 +21,8 @@
 	    		<table class="striped">
 	    			<thead>
 	    				<tr>
-	    					<th>User</th>
 	    					<th>E-mail</th>
+	    					<th>User</th>
 	    					<th>Password</th>
 	    				</tr>
 	    			</thead>
@@ -36,10 +36,10 @@
 	    						echo 
 	    						"
 	    						<tr>
-	    							<td>{$usr->getUsername()}</td>
 	    							<td>{$usr->getEmail()}</td>
+	    							<td>{$usr->getUsername()}</td>
 	    							<td>{$usr->getPassword()}</td>
-	    							<td><a href='#' class='btn-floating deep-purple lighten-1'><i class='mediu material-icons'>create</i></a></td>
+	    							<td><a href='update_user_form.php?mail={$usr->getEmail()}' class='btn-floating deep-purple lighten-1'><i class='mediu material-icons'>create</i></a></td>
 	    						</tr>
 	    						";
 	    					}
@@ -47,7 +47,7 @@
 	    				?>
 	    		</table>
 	    		<br>
-	    		<a href="view/add_user_form.php" class="btn deep-purple lighten-1">Add User</a> <a href="view/delete_user_form.php" class="btn red" id="delete">Delete user</a>
+	    		<a href="create_user_form.php" class="btn deep-purple lighten-1">Add User</a> <a href="delete_user_form.php" class="btn red" id="delete">Delete user</a>
 	    	</div>
     	</div>
 
