@@ -5,51 +5,43 @@
     	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	    <!--Import materialize.css-->
       	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      	<link rel="stylesheet" href="view/css/style.css">
+      	<link rel="stylesheet" href="view/css/index.css">
 
       	<meta charset="utf-8"/>
       	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      	<title>User Management System</title>
+      	<title>Gerenciamento de Usuários</title>
     </head>
     <body>
     	<header class="deep-purple lighten-1">
-    		<h1 class="white-text">User Management System</h1>
+    		<h1 class="center-align white-text center-align">Gerenciamento de usuários</h1>
     	</header>
-    	<div>
-    		<div class="col s12 m6 push-m3">
-	    		<table class="striped">
-	    			<thead>
-	    				<tr>
-	    					<th>E-mail</th>
-	    					<th>User</th>
-	    					<th>Password</th>
-	    				</tr>
-	    			</thead>
-	    			<tbody>
-	    				<?php
-	    				require_once('controller/UserController.class.php');
-	    				$controller = new UserController();
-	    				$list = $controller->read();
-	    				if ($list != null) {
-	    					foreach ($list as $usr) {
-	    						echo 
-	    						"
-	    						<tr>
-	    							<td>{$usr->getEmail()}</td>
-	    							<td>{$usr->getUsername()}</td>
-	    							<td>{$usr->getPassword()}</td>
-	    							<td><a href='update_user_form.php?mail={$usr->getEmail()}' class='btn-floating deep-purple lighten-1'><i class='mediu material-icons'>create</i></a></td>
-	    						</tr>
-	    						";
-	    					}
-	    				}
-	    				?>
-	    		</table>
-	    		<br>
-	    		<a href="create_user_form.php" class="btn deep-purple lighten-1">Add User</a> <a href="delete_user_form.php" class="btn red" id="delete">Delete user</a>
-	    	</div>
-    	</div>
+    	<main class="container">
+    		<div class="row">
+    		<form action="login.php" class="col s12">
+    			<div class="input-field col s12">
+    				<div class="row">
+    					<div class="input-field col s12">
+   							<label for="email">Email</label>
+   							<input type="email" class="validate" id="email" name="email" required="required">
+    				    </div>
+    				</div>
+    				<div class="row">
+    					<div class="input-field col s12">
+    						<label for="password">Senha:</label>
+    						<input type="password" id="password" name="password" required="required" class="validate">
+    					</div>
+    				</div>
+    				<div class="row">
+    					<div class="input-field col s12">
+    						<button class="waves-effect waves-light btn-large deep-purple lighten-1" type="submit">Login</button>
+    						<a class="waves-effect waves-light btn-large amber darken-3">Registrar-se</a>
+    					</div>
+    				</div>
+    			</div>
+    		</form>
+    	</div>	
+    	</main>	
 
       	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>

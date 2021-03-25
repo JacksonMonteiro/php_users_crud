@@ -11,6 +11,6 @@ $mail = $_GET["mail"];
 $controller = new UserController();
 
 if ($controller->update($usr, $mail)) {
-	header("Location: http://localhost/Users-Management/index.php");
+	header("Location: http://localhost/Users-Management/read_data.php");
 }
 ?>

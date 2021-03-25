@@ -11,7 +11,7 @@ $usr->setPassword($_POST["pwd"]);
 $controller = new UserController();
 
 if ($controller->create($usr)) {
-	header ("Location: http://localhost/Users-Management/index.php");
+	header ("Location: http://localhost/Users-Management/read_data.php");
 } else {
 	echo "<h2>Erro</h2>";
 }
